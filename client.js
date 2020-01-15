@@ -14,7 +14,6 @@ const connect = function() {
     // conn.write('Move: up');
   })
 
-
   // client.js
   conn.on('data', (data) => {
     console.log('Server says: ', data);

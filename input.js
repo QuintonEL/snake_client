@@ -9,6 +9,19 @@ const setupInput = function(conn) {
   stdin.setEncoding('utf8');
   stdin.resume();
   const handleUserInput = function(key) {
+    const cannedMsg = ['GG', 'EZ CLAP', 'GIT GOOD', 'GG NO RE',];
+    if (key === '1') {
+      conn.write(`Say: ${cannedMsg[0]}`);
+    }
+    if (key === '2') {
+      conn.write(`Say: ${cannedMsg[1]}`);
+    }
+    if (key === '3') {
+      conn.write(`Say: ${cannedMsg[2]}`);
+    }
+    if (key === '4') {
+      conn.write(`Say: ${cannedMsg[3]}`);
+    }
     if (key === '\u0003') {
       process.exit();
     }
